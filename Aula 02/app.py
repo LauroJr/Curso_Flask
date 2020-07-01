@@ -10,18 +10,24 @@ def index():
     return 'Index'
 
 
-def teste():
-    return '<p>Testando 1</p>'
+def ola_mundo():
+    return '<p>Olá, Mundo!</p>'
 
 
-def teste2():
+def test_two():
     return '<p>Testando 2</p>'
+
+
+def titulo():
+    return '<h1>Corinthians</h1>'
 
 
 # outra forma de criar rotas
 
-app.add_url_rule('/test', 'teste', teste)
-app.add_url_rule('/testt', 'teste2', teste)
+#                   rota      função    return(nome tem que ser igual a função, ou de alguma def existente)
+app.add_url_rule('/world', 'ola_mundo', ola_mundo)
+app.add_url_rule('/teste-2', 'test_two', test_two)
+app.add_url_rule('/time', 'titulo', titulo)
 
 if __name__ == '__main__':
     app.run(debug=True, port="3000")
